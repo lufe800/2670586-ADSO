@@ -8,19 +8,22 @@ public class Ejercicio_condi01{
         int edad;
 
         System.out.println("¡Hola! Ingresa tu nombre y edad");
-        System.out.println("NOMBRE: ");
+        System.out.print("NOMBRE: ");
         nombre = entrada.nextLine();
             
-        System.out.println("EDAD: ");
+        System.out.print("EDAD: ");
         edad = entrada.nextInt();
 
-        if (edad < 17){
-            System.out.println("Usted recibe una auxilio de $ 800.000");
+        if (edad <= 17){
+            System.out.println("Eres menor de edad, recibe un auxilio de $ 800.000");
 
+        }else if(edad <= 0 && edad >= 100){
+            System.out.println("El valor ingresado está fuera del rango ,ingresa tu edad nuevamente");
+            
         }else{
-            System.out.println("Usted recibe una auxilio de $ 200.000");
-
+            System.out.println("Eres mayor de edad, paga impuesto de $ 200.000");
         }
+
     }
 
 }
