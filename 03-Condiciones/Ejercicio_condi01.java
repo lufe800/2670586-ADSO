@@ -17,7 +17,7 @@ public class Ejercicio_condi01{
         if (edad <= 17){
             System.out.println("Eres menor de edad, recibe un auxilio de $ 800.000");
 
-        }else if(edad < -0 && edad >= 100){
+        }else if(edad <= -1 && edad >= 100){
             System.out.println("El valor ingresado está fuera del rango ,ingresa tu edad nuevamente");
             
         }else{
