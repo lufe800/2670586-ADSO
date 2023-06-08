@@ -4,28 +4,28 @@ public class Ejercicio_09{
     public static void main(String []args){
         Scanner entrada = new Scanner(System.in);
 
-        int  horasTra, horaExtra;
-        float tarifa, pagoExtra ;
-        float salario = 0;
+        double horasTra, horaExtra;
+        double tarifa, pagoExtra ;
+        double salario = 0;
 
         System.out.println("Ingrese el total de horas trabajadas:");
-        horasTra = entrada.nextInt();
+        horasTra = entrada.nextDouble();
 
         System.out.println("Ingrese la tarifa por hora trabajada: ");
-        tarifa = entrada.nextFloat();
+        tarifa = entrada.nextDouble();
 
-        if(horasTra > 40){
-            horaExtra = horasTra - 40;
-            pagoExtra = (tarifa * 50)/ 100;
-            salario = (tarifa * 40) + (horaExtra * pagoExtra);
+        horaExtra = horasTra - 40;
+        pagoExtra = (tarifa * 0.5);
+        salario = horasTra * tarifa;
 
-            System.out.println("El sueldo por "+horasTra+ " horas trabajadas es: "+(salario + tarifa) );
 
-        }else if(horasTra <= 40){
-            salario = horasTra * tarifa;
-            System.out.println("El sueldo sin horas extras es : "+salario); 
-        }else{
-            System.out.println("Ingrese nuevamente valores.");
+        if(horasTra <= 40){
+            System.out.println("El salario sin horas extras es : "+salario);
+        }else if(horasTra > 40){
+            horaExtra = horaExtra * pagoExtra;
+            salario = salario + horaExtra;
+            System.out.println("El salario con horas extras es : "+salario );
+            
         }
 
     }
