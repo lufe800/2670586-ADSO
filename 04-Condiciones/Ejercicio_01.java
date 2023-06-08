@@ -7,10 +7,12 @@ public class Ejercicio_01{
         System.out.print("Ingrese un número: ");
         int numero = entrada.nextInt();
 
-        if(numero >= 0){
-           System.out.print("El número" +numero+ "es positivo.");
+        if(numero > 0){
+           System.out.print("El número  " +numero+ "  es positivo.");   
+        }else if(numero == 0 && numero == -0){
+            System.out.print("El número ingresado es neutral.");
         }else{
-            System.out.print("El número ingresado es negativo.");
+            System.out.print("El número ingresado negativo");
         }
     }
 }
