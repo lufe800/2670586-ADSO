@@ -8,14 +8,17 @@ public class Ejercicio_05{
         int numero = entrada.nextInt();
 
         int actual = 0;
-        int posterior = 1;
+        int anterior = 1;
         int fibonacci = 0;
 
-        for(int i= 2; i<= numero; i++){
-            actual = posterior;
-            posterior = fibonacci;
-            fibonacci = actual + posterior;
-          System.out.print(fibonacci+",");
+        System.out.print(actual+","+anterior);
+
+        for(int i= 3; i<= numero; i++){
+            fibonacci = actual + anterior; 
+            actual = anterior;
+            anterior = fibonacci;
+             
+          System.out.print(","+fibonacci);
         }
         
 
