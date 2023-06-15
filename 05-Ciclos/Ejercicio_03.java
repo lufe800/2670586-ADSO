@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Ejercicio_03 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         System.out.print("Ingrese la altura de la pirámide: ");
-        int altura = scanner.nextInt();
+        int altura = entrada.nextInt();
 
         
         for (int filas = altura; filas >= 1; filas--) {
