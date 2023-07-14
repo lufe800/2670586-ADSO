@@ -28,10 +28,6 @@ public class Ejercicio_08{
         }else{
             System.out.print("El número ingresado no es valido."); 
         }
-
-
-
-
         
         
         
