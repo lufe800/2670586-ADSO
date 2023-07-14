@@ -5,31 +5,25 @@ public class Ejercicio_07{
         System.out.print("Ingrese un número impar: ");
         int n = entrada.nextInt();
 
-            for(int i = 0; i < n; i++){
-                for(int j = n-1-i; j >=0; j--){
+            for(int filas = 1; filas <=((n-1)/2)+1; filas++){
+                for(int espacios = 1;espacios <= n-filas; espacios++){
                 System.out.print(" ");
                 }
-                for(int j = 0; j <= i; j++){
-                System.out.print("X ");
+                for(int equis = 1; equis <=(filas*2)-1; equis++){
+                System.out.print("X");
                 }
                 System.out.println("");
 
             }
-            for(int i = 0; i < n; i++){
-                for(int j = 0; j <= i; j++){
+            for(int filas = (n-1)/2; filas >= 1; filas--){
+                for(int espacios = 1; espacios <= n-filas; espacios++){
                 System.out.print(" ");
                 }
-                for(int j = n-1-i; j >=0; j--){
-                System.out.print("X ");
+                for(int equis = 1; equis<=(2*filas)-1; equis++){
+                System.out.print("X");
                 }
                 System.out.println("");
             }
-
-
-
-
-
-
 
     }
 }
