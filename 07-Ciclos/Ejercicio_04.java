@@ -696,11 +696,23 @@ public class Ejercicio_04 {
                 contador_kilometros += kilometros_recorridos;
                 ciudad_origen = ciudad_parada;
             }
+            System.out.print("Ingrese el precio actual del combustible por galón: ");
+            double precio_combustible = entrada.nextDouble();
+            
+            System.out.print("Ingrese el comsumo de galón por kilometro: ");
+            double consumo_combustible = entrada.nextDouble();
+            
+            double combustible_consumido = (contador_kilometros / consumo_combustible);; 
+            double precio_total = combustible_consumido * precio_combustible;
+
+            System.out.println(""); 
 
             System.out.println("");
-            System.out.println("El recorrido total es de " + formato.format(contador_kilometros) + " kilómetros");
+            System.out.println("El recorrido  es de : "+formato.format(contador_kilometros)+" Kilometros");
             System.out.println("");
-            System.out.println("El costo del recorrido es de " + tipo_moneda.format(contador_kilometros * 35000) + " pesos");
+            System.out.println("La cantidad de combustible consumido es : "+formato.format(combustible_consumido)+" Galones");
+            System.out.println("");
+            System.out.println("El valor en pesos del combustible consumido es: " + tipo_moneda.format(precio_total)); 
         } else {
             System.out.println("La ciudad de origen ingresada no es válida");
         }
