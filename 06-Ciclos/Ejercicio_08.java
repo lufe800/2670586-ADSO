@@ -8,7 +8,7 @@ public class Ejercicio_08{
 		System.out.print(" => Ingrese un numero N: ");
 		int numero = entrada.nextInt();
 
-		if ( numero%2 == 0) {
+		if ( numero % 2 == 0) {
 			
 			int contador = 0;
 			for (int filas=1; filas<=numero; filas++) {
