@@ -21,6 +21,7 @@ public class Ejercicio_01{
             for(int i= 0; i< impares.length;i++){
                 System.out.print("{ "+impares[i]+ " }");
             }
+            
 
     }
 }
