@@ -7,22 +7,34 @@ public class Ejercicio_02{
         System.out.print(" => Ingrese un número : ");
 		int numero = entrada.nextInt();
 
-        int primos[] = new int[numero];
+        int arreglo[] = new int[numero];
+        int contPrimos = 0;
+        int primo = 2;
     
-        for(int i = 0; i < primos.length; i++){
-            primos[i] = i;
-            int contador = 0;
-
-            for(int j = 2; j < primos[i];j++){
-                if(primos[i] % j == 0){
-                    contador++;
+        while(contPrimos < numero){
+            // verificar si el numero es primo
+            int divisores = 0;
+            for(int i = 1; i <= primo;i++){
+                if(primo % i == 0){
+                    divisores++;
                 }
             }
-            if(contador == 0 && primos[i] > 1){
-                System.out.print("{ "+primos[i]+ " }");
-            }
-        }
+            //Si es primo...
+            if(divisores == 2){
+              // se almacena el numero en el arreglo
+              arreglo[contPrimos] = primo;
+              //Aumentamos contPrimos
+              contPrimos+= 1;
 
-       
+            }
+            //Aumentar primo
+            primo++;
+        }
+            //Imprimir arreglo
+        System.out.print("Lista de Primos Generada: ");
+        for(int i=0; i<numero; i++){
+            System.out.print("{ "+arreglo[i]+ " }");
+        }
+        
     }
 }
