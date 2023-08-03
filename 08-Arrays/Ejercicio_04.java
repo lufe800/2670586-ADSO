@@ -9,7 +9,7 @@ public class Ejercicio_04{
         int descendente [] = new int[numero];
 
         for(int i=0; i < descendente.length; i++){
-            descendente[i] = i+1;
+            descendente[i] = i;
         }
 
         for (int i = numero; i < descendente.length-1; i++) {
@@ -20,10 +20,6 @@ public class Ejercicio_04{
                     descendente[i+1] = aux;
                 }
             }
-        }
-         System.out.print("\nAscendente : ");
-        for (int i = 0; i < descendente.length; i++) {
-            System.out.print("{ "+descendente[i]+ " }");
         }
            
         System.out.print("\nDescendente : ");
