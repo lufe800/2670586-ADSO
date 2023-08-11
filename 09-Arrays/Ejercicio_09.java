@@ -18,9 +18,9 @@ public class Ejercicio_09{
 
         int posicion = -1;
         for(int i= 0; i < arreglo.length; i++){
-            if(arreglo[i] == numeroM){
+            if(arreglo[i] == numeroM){ 
                 posicion = i;  
-                break;   
+           
             }
             if(posicion == -1){
              System.out.print("");  
