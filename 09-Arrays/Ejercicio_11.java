@@ -19,7 +19,7 @@ public class Ejercicio_11{
         int arregloB[] = new int[numeroM];
         System.out.print("\nArreglo 2 : ");
         for(int i = 0; i < arregloB.length;i++){
-            arregloB[i] = (int)(Math.random()*numeroM);
+            arregloB[i] = (int)(Math.random()*10);
             System.out.print("{ "+arregloB[i]+ " }"); 
         }    
 
