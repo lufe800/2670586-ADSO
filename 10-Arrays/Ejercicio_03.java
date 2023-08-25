@@ -3,17 +3,18 @@ import java.util.Scanner;
 public class Ejercicio_03{
     public static void main(String[] args){
         Scanner entrada = new Scanner(System.in);
+        Scanner entradaTexto = new Scanner(System.in);
 
         String clientes[] = new String[10]; // array que contiene la cantidad de clientes
 
-        int clienteFinal = -1; // contador de clientes---- esto está rarito
-        int opcion = 0;
+        int clienteFinal = 0; // contador de clientes---- esto está rarito
+        int opcion ;
 
-        while(opcion != 5){
-
-            int memoria = clientes.length - (clienteFinal + 1); // variable que almacena registros de cliente y descuenta de los 100
+        
+        do{
+            int memoria = clientes.length - clienteFinal; // variable que almacena registros de cliente y descuenta de los 100
             System.out.println("");
-            System.out.println(" Memoria disponible: "+memoria+" Registros");
+            System.out.println(" Memoria disponible: "+memoria+" Registros.");
             System.out.println("");
 
             System.out.println("-------------------------------");
@@ -27,23 +28,29 @@ public class Ejercicio_03{
 			opcion = entrada.nextInt();
 
             if(opcion == 1){
-                int comprobar = 0;
                 if(clienteFinal == 10){
                     System.out.println("No hay memoria suficiente.");
                 } else {
                     System.out.print("Ingrese un nombre para registrar: ");
-                    String nombre = entrada.next();
+                    String nombre = entradaTexto.nextLine();
 
+                    boolean comprobar = true;
+                    
                     for(int i = 0; i < clientes.length; i++){       //Está incompleto
                         if(nombre.equalsIgnoreCase(clientes[i])){
                             System.out.println("El nombre ya está registrado en la posición: "+(i+1));
-                            //clienteFinal--;
-                            //break; 
+                            comprobar = false;
+                            break;
                         }
+                         
                     }
-                    clienteFinal++;
-                    clientes[clienteFinal] = nombre;
-                    System.out.println("El nombre ha sido registrado correctamente.");
+                      
+                   if(comprobar){
+                        clientes[clienteFinal] = nombre;
+                        clienteFinal++;
+                        System.out.println("El nombre ha sido registrado correctamente.");
+                    }
+                    
                 }
             }
             else if(opcion == 2){
@@ -67,7 +74,7 @@ public class Ejercicio_03{
                     if(editaNombre.equalsIgnoreCase(clientes[i])){
 
                         System.out.println("Ingrese el nuevo nombre: ");
-                        String nombreNuevo = entrada.next();
+                        String nombreNuevo = entradaTexto.nextLine();
 
                         for(int j = 0; j < clienteFinal; j++){
                             if(nombreNuevo.equalsIgnoreCase(clientes[j])){
@@ -112,7 +119,7 @@ public class Ejercicio_03{
             
             
 
-        }
+        }while(opcion != 5);
         
     }
 }

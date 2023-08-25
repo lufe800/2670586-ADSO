@@ -37,14 +37,14 @@ public class Ejercicio_11{
         for(int i = 0; i < arregloC.length -1; i++){//recorre el arreglo, hasta poner en posición final al elemento mas grande
             for(int j = 0; j < arregloC.length -1-i; j++){// segunda pasada para eliminar posición de indice ya asignada
                 if(arregloC[j] > arregloC[j + 1]){
-                    int aux = arregloC[j];
+                    int aux = arregloC[j];// comparación de elementos
                     arregloC[j] = arregloC[j + 1];
                     arregloC[j + 1] = aux;
                 }
 
             }
         }
-        for (int i = 0; i < arregloC.length -1; i++) {
+        for (int i = 0; i < arregloC.length-1; i++) {//-1 para que no excesa la longitud el arreglo
             System.out.print("{ "+arregloC[i+1]+ " }"); 
         } 
         
