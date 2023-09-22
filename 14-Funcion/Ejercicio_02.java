@@ -17,7 +17,6 @@ public class Ejercicio_02{
 
     public static int restar(int a, int b){
         int resultado = (a-b);
-        return resultado;
-      
+        return resultado;  
     }
 }
