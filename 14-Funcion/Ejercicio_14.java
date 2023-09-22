@@ -1,9 +1,9 @@
 public class Ejercicio_14{
 
     public static void main(String[]args){
-        System.out.println("+--------------------------------+");
+        System.out.println("+-------------------------------+");
         System.out.println("+  FUNCIÓN ARREGLO ASCENDENTE   +");
-        System.out.println("+--------------------------------+");
+        System.out.println("+-------------------------------+");
 
         int[] ascendente = {5,4,3,2,1};
         verificarArregloAscendente(ascendente);
