@@ -36,9 +36,6 @@ public class Ejercicio_12{
             System.out.println("=> "+numero + " No es primo.");
         }
 
-
-
-
     }
 
     public static boolean numPrimo(int numero){
