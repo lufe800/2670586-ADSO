@@ -53,11 +53,7 @@ public class Ejercicio_07{
         for(int i=0; i<numeros5.length; i++){
             System.out.print("{ "+numeros5[i]+ " }");
         }
-    }
-
-
-
-    
+    } 
 
     public static void arreglo(int[]numeros){
         for(int i=0; i<numeros.length;i++){
