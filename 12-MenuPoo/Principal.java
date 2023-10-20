@@ -73,7 +73,7 @@ public class Principal{
                 }
 
             }
-           
+
             if(opcion == 2){
                 System.out.println("\n\n");
                 System.out.println("+------------------------------+");

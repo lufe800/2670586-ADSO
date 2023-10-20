@@ -9,10 +9,6 @@ public class Persona{
     int edad;
     int altura;
     double peso;
-   
-
-
-
 
     //Metodos => Acciones
     // - Constructores
