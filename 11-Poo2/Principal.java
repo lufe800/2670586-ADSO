@@ -5,13 +5,18 @@ public class Principal{
         Perro perro_01 = new Perro(" Pecas"," María", 108, " Boxer", 30.5, 40);
         Perro perro_02 = new Perro(" Samantha"," Oscar ", 2, " Weimaraner", 4.5, 90);
 
-        System.out.println("El nombre del perro 01 es:" +perro_01.getNombre());
-        System.out.println("El nombre del perro 01 es:" +perro_02.getNombre());
+        // System.out.println("El nombre del perro 01 es:" +perro_01.getNombre());
+        // System.out.println("El nombre del perro 02 es:" +perro_02.getNombre());
 
         perro_01.comer(800);
-
-        perro_01.imprimirDetalle();
+        // perro_01.imprimirDetalle();
         //perro_02.imprimirDetalle();
+
+        perro_01.dormir(400);
+        perro_01.imprimirDetalle();
+
+        perro_02.jugar(120);
+        perro_02.imprimirDetalle();
 
 
 

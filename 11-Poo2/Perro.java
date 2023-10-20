@@ -95,6 +95,26 @@ public class Perro{
         energia += (gramos/100); 
     }
 
+    public void dormir(int minutosDescanso){
+        peso += ((double)minutosDescanso/300)*2;
+        
+        energia += (minutosDescanso/60);
+    }
+
+    public void jugar(int minutosJuego){
+        peso -= ((double)minutosJuego/60)*0.2;
+
+        if(minutosJuego <= 60){
+            energia += (minutosJuego/60);
+        }else{
+            energia -= (minutosJuego/60)*2;
+        }
+    }
+
+    public void correr(int minutosCorrer, int distancia){
+        
+    }
+
 
 
 
