@@ -549,12 +549,10 @@ public class Facturador extends JFrame{
 				
 			}
 		}
-
 		input_nombre_producto.setText(nombreProducto);
-		input_cant_producto.requestFocus();
-
-		
+		input_cant_producto.requestFocus();	
 	} 
+	
 
 	public void imprimir(){
 		String idProducto = input_id_producto.getText();
@@ -576,6 +574,13 @@ public class Facturador extends JFrame{
 		listaJLabels[indiceItems].setText(text);
 		indiceItems ++;
 		etq_total.setText("Total: $ "+cadenaTotal);
+
+		input_id_producto.setText("");
+		input_nombre_producto.setText("");
+		input_cant_producto.setText("");
+		input_id_producto.requestFocus();	
+
+
 
 	}
 
