@@ -25,12 +25,12 @@ public class Prestamos extends JFrame{
         etq_titulo.setText("PRESTAMOS");
         etq_titulo.setFont(new Font ("Arial", Font.BOLD, 30));
         etq_titulo.setHorizontalAlignment(JLabel.CENTER);
-        restricciones.gridx = 0;
-        restricciones.gridy = 0;
-        restricciones.gridwidth = 2;
-        restricciones.gridheight = 1;
-        restricciones.weightx = 100;
-        restricciones.weighty = 1;
+        restricciones.gridx = 0; //posicion columna
+        restricciones.gridy = 0; // posicion fila
+        restricciones.gridwidth = 2; //Esta línea establece el ancho del componente en celdas de la cuadrícula. En este caso, se establece en 2, lo que significa que el JLabel ocupará 2 columnas en la cuadrícula.
+        restricciones.gridheight = 1; //Esta línea establece la altura del componente en celdas de la cuadrícula. En este caso, se establece en 1, lo que significa que el JLabel ocupará solo 1 fila en la cuadrícula.
+        restricciones.weightx = 100; //El peso determina cómo se distribuye el espacio adicional en el contenedor. En este caso, se establece en 100, lo que significa que el JLabel ocupará todo el espacio horizontal disponible.
+        restricciones.weighty = 1; // Esta línea establece el peso del componente en la dirección vertical. En este caso, se establece en 1, lo que significa que el JLabel ocupará todo el espacio vertical disponible.
         restricciones.fill = GridBagConstraints.BOTH;
         contenedor.add(etq_titulo, restricciones);
 
@@ -67,7 +67,6 @@ public class Prestamos extends JFrame{
         etq_intereses.setFont(new Font ("Arial", Font.BOLD, 20));
         etq_intereses.setHorizontalAlignment(JLabel.CENTER);
         restricciones.gridx = 0;
-        restricciones.gridx = 0;
         restricciones.gridy = 2;
         restricciones.gridwidth = 1;
         restricciones.gridheight = 1;
@@ -93,7 +92,6 @@ public class Prestamos extends JFrame{
         etq_cuotas.setText("Cuotas: ");
         etq_cuotas.setFont(new Font ("Arial", Font.BOLD, 20));
         etq_cuotas.setHorizontalAlignment(JLabel.CENTER);
-        restricciones.gridx = 0;
         restricciones.gridx = 0;
         restricciones.gridy = 3;
         restricciones.gridwidth = 1;

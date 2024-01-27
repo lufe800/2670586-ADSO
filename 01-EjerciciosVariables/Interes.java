@@ -16,7 +16,7 @@ public class Interes{
 
         monto_final = inver_inicial * Math.pow((1+tasa_inter / 100),periodos);
 
-         System.out.println("El monto final es: "+monto_final);
+        System.out.println("El monto final es: "+monto_final);
         
         tasa_inter = monto_final - inver_inicial;
 

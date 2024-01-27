@@ -244,7 +244,7 @@ public class Ejercicio_09{
 
             if(d7 != 1){
                 if(d8 == 0){
-                   System.out.print(""); 
+                    System.out.print(""); 
                 }else if(d8 == 1){
                     System.out.print("UNO");
                 }else if(d8 == 2){

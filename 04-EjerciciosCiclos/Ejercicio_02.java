@@ -20,7 +20,6 @@ public class Ejercicio_02{
             sumaCreditos = sumaCreditos + creditos;
 
             contador = contador + 1;
-           
         }
         System.out.println("Total creditos: "+ sumaCreditos);
         double promedio = sumaNotas / sumaCreditos;
