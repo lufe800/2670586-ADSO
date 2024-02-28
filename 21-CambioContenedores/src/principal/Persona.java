@@ -5,11 +5,12 @@ public class Persona {
     String cedula;
     String nombres;
     String apellidos;
-    String direccion;
     String telefono;
+    String direccion;
     String correo;
+    public String getNombres;
 
-    public Persona(String documento, String nombres, String apellidos, String direccion, String telefono, String correo) {
+    public Persona(String documento, String nombres, String apellidos, String telefono, String direccion,  String correo) {
         this.cedula = documento;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -37,18 +38,11 @@ public class Persona {
     public String getApellidos() {
         return apellidos;
     }
-    
-    public String getDireccion() {
-        return direccion;
-    }
 
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
     
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
 
     public String getTelefono() {
         return telefono;
@@ -56,6 +50,14 @@ public class Persona {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+    
+    public String getDireccion() {
+        return direccion;
+    }
+    
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getCorreo() {

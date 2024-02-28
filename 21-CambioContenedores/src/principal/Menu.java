@@ -9,6 +9,7 @@ import utils.BaseDatos;
 public class Menu extends javax.swing.JFrame {
     BaseDatos baseDatos = new BaseDatos();
     public Menu() {
+        
         initComponents();
         btnListarActionPerformed(null);
         initAlternComponents();   
@@ -126,16 +127,16 @@ public class Menu extends javax.swing.JFrame {
             contentMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contentMenuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(etqImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(etqImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
+                .addGap(6, 6, 6))
         );
 
         contentPrincipal.setBackground(new java.awt.Color(153, 204, 255));
@@ -148,7 +149,7 @@ public class Menu extends javax.swing.JFrame {
         contentPrincipal.setLayout(contentPrincipalLayout);
         contentPrincipalLayout.setHorizontalGroup(
             contentPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(etqTemporal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
+            .addComponent(etqTemporal, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
         );
         contentPrincipalLayout.setVerticalGroup(
             contentPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

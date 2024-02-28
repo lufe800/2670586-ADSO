@@ -9,7 +9,6 @@ public class BaseDatos {
    
     Connection conexion;
     Statement manipularDB;
-    Persona litapersonas[];
     public com.sun.jdi.connect.spi.Connection getConexion;
     
     public BaseDatos(){
@@ -61,7 +60,7 @@ public class BaseDatos {
                     String documento = registros.getString("cedula");
                     String nombres = registros.getString("nombres");
                     String apellidos = registros.getString("apellidos");
-                     String direccion = registros.getString("direccion");
+                    String direccion = registros.getString("direccion");
                     String telefono = registros.getString("telefono");
                     String correo = registros.getString("email");
                     
@@ -99,29 +98,34 @@ public class BaseDatos {
         return respuesta;
     }
     
-     public Persona buscarPersona(String cedula, Persona listaPersona[]){
-         Persona resultado = null;
+     public Persona buscarPersona(String cedula){ //una funcion devuelve un solo tipo de dato
+                                                                                
+         Persona resultado = null; // NULL funcion de objetos que significa que exite, pero no hay nada
          
         try{
-            String consulta = "SELECT * FROM personas WHERE cedula = '" +cedula+ "' ";
+            String consulta = "SELECT * FROM personas WHERE cedula = '" +cedula+ "' "; //se crea la consulta sql donde cedula sea igual a cedula
+            ResultSet registros = manipularDB.executeQuery(consulta); //se ejecuta la consulta y se almacena en ResultSet registros para preguntar si se puede ubicar en el primer registro
+            registros.next(); // si se va por el else no existe el registro
             
-            ResultSet registro = manipularDB.executeQuery(consulta);
-            
-            for(int i=0; i<listaPersona.length && listaPersona[i] != null; i++){
-                String documento = listaPersona[i].getDocumento();
-                String nombres = listaPersona[i].getNombres();
-                String apellidos = listaPersona[i].getApellidos();
-                String direccion = listaPersona[i].getDireccion();
-                String telefono = listaPersona[i].getTelefono();
-                String correo = listaPersona[i].getCorreo();
+            if(registros.getRow()==1){ // si encontró esa persona es igual a uno y se retornan los datos
+                String documento = registros.getString("cedula");
+                String nombres = registros.getString("nombres");
+                String apellidos = registros.getString("apellidos");
+                String direccion = registros.getString("direccion");
+                String telefono = registros.getString("telefono");
+                String correo = registros.getString("email");
                 
-                resultado = new Persona(documento, nombres, apellidos,direccion, telefono, correo);
-                break;   
+                resultado = new Persona(documento, nombres, apellidos,direccion, telefono, correo); // se crea a la nueva persona con todos los datos
+                return resultado; // retorna el resultado
+            }else{
+                return resultado;
             }    
-        }catch (SQLException e){
-            System.out.println("Error al buscar registros: "+e.getMessage());
+        }catch (SQLException ex){
+            System.out.println("Error al buscar registros: "+ex.getMessage());
+            System.out.println(ex.getMessage());
+            return null;
         }
-          return resultado;
+        
     }
     
     public boolean actualizarPersona(String cedula, String nombres, String apellidos, String direccion, String telefono, String email){
